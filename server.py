@@ -36,6 +36,13 @@ def image():
 		str = base64.b64encode(imageFile.read())
 		anomaly_detection_api.detect_anomaly()
 	return str
+	
+@app.route('/imagee', methods=['POST'])
+def image():
+	with open("movie1.gif", "rb") as imageFile:
+		str = base64.b64encode(imageFile.read())
+		anomaly_detection_api.detect_anomaly()
+	return str	
 
 
 if __name__ == '__main__':

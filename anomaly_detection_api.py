@@ -14,6 +14,7 @@ from keras.models import load_model
 import numpy as np
 from flask import send_file
 import sys
+from time import sleep 
 
 sys.path.append("..")
 
@@ -75,7 +76,7 @@ def detect_anomaly():
 
 
 		loss=mean_squared_loss(n_bunch,reconstructed_bunch)
-
+		sleep(20)
 		if loss>threshold:
 			print("Anomalous bunch of frames at bunch number {}".format(number))
 			flag=1
