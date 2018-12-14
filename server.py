@@ -27,6 +27,10 @@ def local():
 @app.route('/video')
 def remote():
     return Response(open('./static/video.html').read(), mimetype="text/html")
+	
+@app.route('/viideo')
+def remotee():
+    return Response(open('./static/viideo.html').read(), mimetype="text/html")	
 
 
 
@@ -38,7 +42,7 @@ def image():
 	return str
 	
 @app.route('/imagee', methods=['POST'])
-def image():
+def imagee():
 	with open("movie1.gif", "rb") as imageFile:
 		str = base64.b64encode(imageFile.read())
 		anomaly_detection_api.detect_anomaly()
@@ -46,5 +50,5 @@ def image():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost',port= 80)
+    app.run(debug=True, host='localhost',port= 8000)
 

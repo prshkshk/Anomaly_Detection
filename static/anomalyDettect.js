@@ -1,10 +1,10 @@
 //Parameters
-const s = document.getElementById('anomalyDetect');
+const s = document.getElementById('anomalyDettect');
 const sourceVideo = s.getAttribute("data-source");  //the source video to use
 const uploadWidth = s.getAttribute("data-uploadWidth") || 640; //the width of the upload file
 const mirror = s.getAttribute("data-mirror") || false; //mirror the boundary boxes
 const scoreThreshold = s.getAttribute("data-scoreThreshold") || 0.5;
-const apiServer = s.getAttribute("data-apiServer") || window.location.origin + '/image';
+const apiServer = s.getAttribute("data-apiServer") || window.location.origin + '/imagee';
 //Video element selector
 v = document.getElementById(sourceVideo);
 //for starting events
